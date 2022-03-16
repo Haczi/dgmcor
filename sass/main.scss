@@ -35,6 +35,28 @@ h1.company-name {
 	width: 100%;
 }
 
+.section-title{
+	width: fit-content;
+	position: relative;
+	margin: .1em auto 2em;
+	font-size: 3.2rem;
+	font-weight: 200;
+	color: $gold;
+
+	&::before{
+		position: absolute;
+		width: 20%;
+		height: 3px;
+		bottom: -.1px;
+		left: 0;
+		content: '';
+		background-color:$gold ;
+	}
+span{
+	font-weight: 900;
+}
+}
+
 //header
 .header {
 	display: grid;
@@ -143,6 +165,130 @@ h1.company-name {
 }
 
 }
+}
+
+//main
+//cards
+.cards{
+	background-color: $darker;
+	overflow: hidden;
+&__box{
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 2em;
+	padding: 6em 2em;
+	}
+	&__card{
+		position: relative;
+		display: grid;
+		justify-items: center;
+		text-align: center;
+		background-color: $dark;
+		padding: 3em;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		transition: background-color 1s;
+		z-index: 5;
+		&:hover{
+			background-color: $darker;
+			z-index: 1;
+		}
+		&::before{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 8px;
+			border: 1px solid $gold;
+			content: '';
+			opacity: 0;
+			
+
+		}
+		&:hover::before{
+			animation: pulse 1s;
+		
+		}
+
+		&--one{
+			grid-column: 1/-1;
+			grid-row: 1/2;
+		}
+		&--two{
+			grid-column: 1/-1;
+			grid-row: 2/3;
+		}
+		&--three{
+			grid-column: 1/-1;
+			grid-row: 3/4;
+		}
+		img{
+			width: 10%;
+			margin-bottom: 0.5em;
+		}
+		h3{
+			margin-bottom: .5em;
+			text-transform: uppercase;
+
+
+		}
+	}
+
+}
+
+//invest
+
+.info{
+position: relative;
+display: grid;
+grid-template-areas: 
+"title"
+"box"
+"box";
+padding: 6em 2em;
+&__title{
+	grid-area: title;
+}
+&__boxes{
+	grid-area: box
+}
+&__box{
+&-img{
+	width: 100%;
+	object-fit: cover;
+	filter: sepia()
+}
+
+&-title{
+	margin: .3em 0;
+	font-size: 2.6rem;
+	color: $gold;
+	font-weight: 200;
+}
+&-text{
+	margin-bottom: .5em;
+}
+&-link{
+	display: block;
+	margin-bottom: 2em;
+	font-weight: bold;
+	text-align: right;
+	text-decoration: none;
+	color: $gold;
+	transition: color .3s;
+
+	&:hover{
+		color: $darkgold;
+	}
+
+}
+}
+
+&__bg-icon{
+	display: none;
+}
+
+
 }
 
 @import './small';
