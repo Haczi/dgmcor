@@ -1,3 +1,65 @@
-@media(min-widt: 992px){
-    
+@media(min-width: 576px){
+
+    .info{
+        grid-template-areas: 
+        "title box"
+        "title box"
+        "title box";
+
+        &__title{
+            margin-right: 4em;
+            font-size: 3rem;
+        }
+        &__box{
+            display: grid;
+            justify-content: flex-end;
+        
+
+        &-img,
+        &-text{
+            max-width: 500px;
+        }
+    }
+
+    &__bg-icon--one{
+        position: absolute;
+        display: block;
+        top: 30%;
+        width: 30%;
+        left: -15%;
+        opacity: 0.05;
+        animation: rotate-left 160s infinite linear;
+        z-index: -5;
+    }
+    &__bg-icon--two{
+        position: absolute;
+        display: block;
+        top: 60%;
+        width: 50%;
+        left: 10%;
+        opacity: 0.05;
+        animation: rotate-right 120s infinite linear;
+        z-index: -5;
+    }
+    &__bg-icon--three{
+        position: absolute;
+        display: block;
+        top: 10%;
+        width: 40%;
+        left: 30%;
+        opacity: 0.05;
+        z-index: -5;
+        animation: rotate-right 130s infinite linear;
+    }
+    &__bg-icon--four{
+        position: absolute;
+        display: block;
+        top: 45%;
+        width: 20%;
+        left: 20%;
+        opacity: 0.05;
+        animation: rotate-left 110s infinite linear;
+        z-index: -5;
+    }
+}
 }
