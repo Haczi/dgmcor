@@ -25,6 +25,19 @@
         }
 	}
 
+    .gallery{
+	
+        grid-template-columns: repeat(8, 1fr);
+    
+        img{
+            
+    
+            &:nth-child(odd){
+                display: block
+            }
+        }
+    }
+
 }
 @media(min-width: 860px){
     
